@@ -1,4 +1,5 @@
 import type { friendType } from "../types/friendType";
+import Button from "./Button";
 
 type friendProps = {
   friend: friendType;
@@ -20,7 +21,7 @@ function Friend({ friend }: friendProps) {
         </p>
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
-      <button className="button">Select</button>
+      <Button>Select</Button>
     </li>
   );
 }
