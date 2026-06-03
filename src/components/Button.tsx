@@ -1,7 +1,11 @@
-type buttonProps = { children: string };
+type buttonProps = { children: string; onClick?: () => void };
 
-function Button({ children }: buttonProps) {
-  return <button className="button">{children}</button>;
+function Button({ children, onClick }: buttonProps) {
+  return (
+    <button className="button" onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
